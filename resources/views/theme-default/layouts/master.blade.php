@@ -8,10 +8,10 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>@yield('title') | Thien Pham Theme</title>
+        <title>@yield('title') | Minh Trúc Pharma</title>
         <meta name="description" content="@yield('description')">
         <meta name="keywords" content="@yield('keywords')">
-        <meta name="author" content="Thien Pham" />
+        <meta name="author" content="Web Đẹp Nha Trang" />
         <meta http-equiv="content-language" content="{{ app()->getLocale() }}" />
         <meta name="robots" content="index, follow">
         <meta name="revisit-after" content="3 days">
@@ -21,7 +21,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- FB Open Graph Tags -->
-        <meta property="fb:app_id"        content="2227774044178793" />
+        <meta property="fb:app_id"        content="xxxxxxxxxxxxxx" />
         <meta property="og:url"           content="@yield('fb_url')" />
         <meta property="og:type"          content="@yield('fb_type')" />
         <meta property="og:title"         content="@yield('fb_title')" />
@@ -40,7 +40,7 @@
         <!-- Google Analytics gtag js -->
         @include('theme-default.google.analytics')
     </head>
-    <body>
+    <body id="bg">
         <!-- Facebook SDK js -->
         @include('theme-default.facebook.facebook-sdk')
 
