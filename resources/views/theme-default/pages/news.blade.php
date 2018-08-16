@@ -12,10 +12,10 @@
 @section('content')
 <div class="page-content">
         <!-- inner page banner -->
-        <div class="dez-bnr-inr overlay-black-middle" style="background-image:url(images/banner/bnr1.jpg);">
+        <div class="dez-bnr-inr overlay-black-middle" style="background-image:url({{ Voyager::image(setting('news.background')) }});">
             <div class="container">
                 <div class="dez-bnr-inr-entry">
-                    <h1 class="text-white">Hoạt Động Nổi Bật</h1>
+                    <h1 class="text-white">{{ setting('news.title') }}</h1>
                 </div>
             </div>
         </div>
@@ -30,176 +30,47 @@
             </div>
         </div>
         <!-- Breadcrumb row END -->
+        @php
+            $posts = getPostByCategory('*', 1, 'created_at', 'desc', setting('news.paginate'));
+        @endphp
+        @if($posts->count()>0)
         <div class="content-area">
             <div class="container">
                 <div class="row">
                     <!-- blog grid -->
                     <div id="masonry" class="dez-blog-grid-3">
+                        @foreach($posts as $v)
                         <div class="post card-container col-lg-4 col-md-6 col-sm-6 col-xs-12">
                             <div class="blog-post blog-grid date-style-2">
-                                <div class="dez-post-media dez-img-effect zoom-slow"> <a href="#"><img src="images/blog/grid/pic1.jpg" alt=""></a> </div>
+                                <div class="dez-post-media dez-img-effect zoom-slow"> <a href="#"><img src="{{ Voyager::image($v->image) }}" alt="{{ $v->title }}"></a> </div>
                                 <div class="dez-post-info">
                                     <div class="dez-post-title ">
-                                        <h3 class="post-title"><a href="#">Title of first blog post</a></h3>
+                                        <h3 class="post-title"><a href="#">{{ $v->title }}</a></h3>
                                     </div>
                                     <div class="dez-post-meta ">
                                         <ul>
-                                            <li class="post-date"> <i class="fa fa-calendar"></i><strong>10 Aug</strong> <span> 2016</span> </li>
-                                            <li class="post-author"><i class="fa fa-user"></i>By <a href="#">demongo</a> </li>
-                                            <li class="post-comment"><i class="fa fa-comments"></i> <a href="#">0 Comments</a> </li>
+                                            <li class="post-date"> <i class="fa fa-calendar"></i><strong>{{ $v->created_at->format('d-M') }}</strong> <span> {{ $v->created_at->format('Y') }}</span> </li>
+                                            <li class="post-author"><i class="fa fa-user"></i>Đăng bởi <a href="#">Minh Trúc Pharma</a> </li>
                                         </ul>
                                     </div>
                                     <div class="dez-post-text">
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-                                            text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                        <p class="excerpt">{{ shorten_text($v->excerpt, 200, '...', true) }}</p>
                                     </div>
-                                    <div class="dez-post-readmore"> <a href="#" title="READ MORE" rel="bookmark" class="site-button-link">READ MORE<i class="fa fa-angle-double-right"></i></a> </div>
-                                    <div class="dez-post-tags">
-                                        <div class="post-tags"> <a href="#">Child </a> <a href="#">Eduction </a> <a href="#">Money </a> <a href="#">Resturent </a> </div>
-                                    </div>
+                                    <div class="dez-post-readmore"> <a href="#" title="READ MORE" rel="bookmark" class="site-button-link">Xem Thêm<i class="fa fa-angle-double-right"></i></a> </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="post card-container col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                            <div class="blog-post blog-grid date-style-2">
-                                <div class="dez-post-media dez-img-effect zoom-slow"> <a href="#"><img src="images/blog/grid/pic2.jpg" alt=""></a> </div>
-                                <div class="dez-post-info">
-                                    <div class="dez-post-title ">
-                                        <h3 class="post-title"><a href="#">Title of first blog post</a></h3>
-                                    </div>
-                                    <div class="dez-post-meta ">
-                                        <ul>
-                                            <li class="post-date"> <i class="fa fa-calendar"></i><strong>10 Aug</strong> <span> 2016</span> </li>
-                                            <li class="post-author"><i class="fa fa-user"></i>By <a href="#">demongo</a> </li>
-                                            <li class="post-comment"><i class="fa fa-comments"></i> <a href="#">0 Comments</a> </li>
-                                        </ul>
-                                    </div>
-                                    <div class="dez-post-text">
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-                                            text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                    </div>
-                                    <div class="dez-post-readmore"> <a href="#" title="READ MORE" rel="bookmark" class="site-button-link">READ MORE<i class="fa fa-angle-double-right"></i></a> </div>
-                                    <div class="dez-post-tags">
-                                        <div class="post-tags"> <a href="#">Child </a> <a href="#">Eduction </a> <a href="#">Money </a> <a href="#">Resturent </a> </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="post card-container col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                            <div class="blog-post blog-grid date-style-2">
-                                <div class="dez-post-media dez-img-effect zoom-slow"> <a href="#"><img src="images/blog/grid/pic3.jpg" alt=""></a> </div>
-                                <div class="dez-post-info">
-                                    <div class="dez-post-title ">
-                                        <h3 class="post-title"><a href="#">Title of first blog post</a></h3>
-                                    </div>
-                                    <div class="dez-post-meta ">
-                                        <ul>
-                                            <li class="post-date"> <i class="fa fa-calendar"></i><strong>10 Aug</strong> <span> 2016</span> </li>
-                                            <li class="post-author"><i class="fa fa-user"></i>By <a href="#">demongo</a> </li>
-                                            <li class="post-comment"><i class="fa fa-comments"></i> <a href="#">0 Comments</a> </li>
-                                        </ul>
-                                    </div>
-                                    <div class="dez-post-text">
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-                                            text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                    </div>
-                                    <div class="dez-post-readmore"> <a href="#" title="READ MORE" rel="bookmark" class="site-button-link">READ MORE<i class="fa fa-angle-double-right"></i></a> </div>
-                                    <div class="dez-post-tags">
-                                        <div class="post-tags"> <a href="#">Child </a> <a href="#">Eduction </a> <a href="#">Money </a> <a href="#">Resturent </a> </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="post card-container col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                            <div class="blog-post blog-grid date-style-2">
-                                <div class="dez-post-media dez-img-effect zoom-slow"> <a href="#"><img src="images/blog/grid/pic4.jpg" alt=""></a> </div>
-                                <div class="dez-post-info">
-                                    <div class="dez-post-title ">
-                                        <h3 class="post-title"><a href="#">Title of first blog post</a></h3>
-                                    </div>
-                                    <div class="dez-post-meta ">
-                                        <ul>
-                                            <li class="post-date"> <i class="fa fa-calendar"></i><strong>10 Aug</strong> <span> 2016</span> </li>
-                                            <li class="post-author"><i class="fa fa-user"></i>By <a href="#">demongo</a> </li>
-                                            <li class="post-comment"><i class="fa fa-comments"></i> <a href="#">0 Comments</a> </li>
-                                        </ul>
-                                    </div>
-                                    <div class="dez-post-text">
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-                                            text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                    </div>
-                                    <div class="dez-post-readmore"> <a href="#" title="READ MORE" rel="bookmark" class="site-button-link">READ MORE<i class="fa fa-angle-double-right"></i></a> </div>
-                                    <div class="dez-post-tags">
-                                        <div class="post-tags"> <a href="#">Child </a> <a href="#">Eduction </a> <a href="#">Money </a> <a href="#">Resturent </a> </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="post card-container col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                            <div class="blog-post blog-grid date-style-2">
-                                <div class="dez-post-media dez-img-effect zoom-slow"> <a href="#"><img src="images/blog/grid/pic1.jpg" alt=""></a> </div>
-                                <div class="dez-post-info">
-                                    <div class="dez-post-title ">
-                                        <h3 class="post-title"><a href="#">Title of first blog post</a></h3>
-                                    </div>
-                                    <div class="dez-post-meta ">
-                                        <ul>
-                                            <li class="post-date"> <i class="fa fa-calendar"></i><strong>10 Aug</strong> <span> 2016</span> </li>
-                                            <li class="post-author"><i class="fa fa-user"></i>By <a href="#">demongo</a> </li>
-                                            <li class="post-comment"><i class="fa fa-comments"></i> <a href="#">0 Comments</a> </li>
-                                        </ul>
-                                    </div>
-                                    <div class="dez-post-text">
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-                                            text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                    </div>
-                                    <div class="dez-post-readmore"> <a href="#" title="READ MORE" rel="bookmark" class="site-button-link">READ MORE<i class="fa fa-angle-double-right"></i></a> </div>
-                                    <div class="dez-post-tags">
-                                        <div class="post-tags"> <a href="#">Child </a> <a href="#">Eduction </a> <a href="#">Money </a> <a href="#">Resturent </a> </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="post card-container col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                            <div class="blog-post blog-grid date-style-2">
-                                <div class="dez-post-media dez-img-effect zoom-slow"> <a href="#"><img src="images/blog/grid/pic2.jpg" alt=""></a> </div>
-                                <div class="dez-post-info">
-                                    <div class="dez-post-title ">
-                                        <h3 class="post-title"><a href="#">Title of first blog post</a></h3>
-                                    </div>
-                                    <div class="dez-post-meta ">
-                                        <ul>
-                                            <li class="post-date"> <i class="fa fa-calendar"></i><strong>10 Aug</strong> <span> 2016</span> </li>
-                                            <li class="post-author"><i class="fa fa-user"></i>By <a href="#">demongo</a> </li>
-                                            <li class="post-comment"><i class="fa fa-comments"></i> <a href="#">0 Comments</a> </li>
-                                        </ul>
-                                    </div>
-                                    <div class="dez-post-text">
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-                                            text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                    </div>
-                                    <div class="dez-post-readmore"> <a href="#" title="READ MORE" rel="bookmark" class="site-button-link">READ MORE<i class="fa fa-angle-double-right"></i></a> </div>
-                                    <div class="dez-post-tags">
-                                        <div class="post-tags"> <a href="#">Child </a> <a href="#">Eduction </a> <a href="#">Money </a> <a href="#">Resturent </a> </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                     <!-- blog grid END -->
                     <!-- Pagination -->
                     <div class="pagination-bx col-lg-12 clearfix ">
-                        <ul class="pagination">
-                            <li class="previous"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
-                            <li class="active"><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li class="next"><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
-                        </ul>
+                        {{ $posts->links() }}
                     </div>
                     <!-- Pagination END -->
                 </div>
             </div>
         </div>
+        @endif
     </div>
 @endsection

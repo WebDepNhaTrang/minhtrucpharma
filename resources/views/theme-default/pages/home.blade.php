@@ -213,68 +213,37 @@
             <div class="container">
                 <div class="section-head text-center ">
                     <h3 class="h3 text-uppercase">Hoạt Động <span class="text-primary">Nổi Bật</span></h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the industry's standard dummy text ever since the been when an unknown printer.</p>
-                </div>
+                    <p>{{ setting('news.description') }}</p>
+				</div>
+				@php
+					$posts = getPostByCategory('*', 1, 'created_at', 'desc', setting('news.paginate'));
+				@endphp
+				@if($posts->count()>0)
                 <div class="section-content owl-none">
                     <div class="blog-carousel">
+						@foreach($posts as $v)
                         <div class="item">
 							<div class="dez-box">
 								<div class="dez-media"> 
-									<a href="#"><img src="images/our-services/service/pic2.jpg" alt=""></a> 
+									<a href="#"><img src="{{ Voyager::image($v->image) }}" alt="{{ $v->title }}"></a> 
 								</div>
 								<div class="dez-info p-a20 border-1">
 									<div class="dez-post-meta ">
                                         <ul>
-                                            <li class=""> <i class="fa fa-calendar"></i><strong>10 Aug</strong> <span> 2016</span> </li>
-                                            <li class="post-author"><i class="fa fa-user"></i>By <a href="#">Jone</a> </li>
-                                            <li class="post-comment"><i class="fa fa-comments"></i> <a href="#">0</a> </li>
+                                            <li class=""> <i class="fa fa-calendar"></i><strong>{{ $v->created_at->format('d-m-Y') }}</strong></li>
+                                            <li class="post-author"><i class="fa fa-user"></i>Đăng bởi <a href="#">Minh Trúc Pharma</a> </li>
                                         </ul>
                                     </div>
-									<h4 class="dez-title m-t15"><a href="#">Provide qualtiy productivity..</a></h4>
-									<p class="m-b15">Lorem ipsum dolor Fusce varius euismod lacus eget feugiat rorem ipsum dolor consectetur Fusce varius [...]</p>
-									<a href="#" class="site-button-link black">Read More <i class="fa fa-long-arrow-right"></i></a> 
+									<h4 class="dez-title m-t15"><a href="#">{{ $v->title }}</a></h4>
+									<p class="m-b15 excerpt">{{ shorten_text($v->excerpt, 200, '...', true) }}</p>
+									<a href="#" class="site-button-link black">Xem thêm <i class="fa fa-long-arrow-right"></i></a> 
 								</div>
 							</div>
 						</div>
-						<div class="item">
-							<div class="dez-box">
-								<div class="dez-media"> 
-									<a href="#"><img src="images/our-services/service/pic3.jpg" alt=""></a> 
-								</div>
-								<div class="dez-info p-a20 border-1">
-									<div class="dez-post-meta ">
-                                        <ul>
-                                            <li class=""> <i class="fa fa-calendar"></i><strong>10 Aug</strong> <span> 2016</span> </li>
-                                            <li class="post-author"><i class="fa fa-user"></i>By <a href="#">Jone</a> </li>
-                                        </ul>
-                                    </div>
-									<h4 class="dez-title m-t15"><a href="#">Provide qualtiy productivity..</a></h4>
-									<p class="m-b15">Lorem ipsum dolor Fusce varius euismod lacus eget feugiat rorem ipsum dolor consectetur Fusce varius [...]</p>
-									<a href="#" class="site-button-link black">Read More <i class="fa fa-long-arrow-right"></i></a> 
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="dez-box">
-								<div class="dez-media"> 
-									<a href="#"><img src="images/our-services/service/pic4.jpg" alt=""></a> 
-								</div>
-								<div class="dez-info p-a20 border-1">
-									<div class="dez-post-meta ">
-                                        <ul>
-                                            <li class=""> <i class="fa fa-calendar"></i><strong>10 Aug</strong> <span> 2016</span> </li>
-                                            <li class="post-author"><i class="fa fa-user"></i>By <a href="#">Jone</a> </li>
-                                            <li class="post-comment"><i class="fa fa-comments"></i> <a href="#">0</a> </li>
-                                        </ul>
-                                    </div>
-									<h4 class="dez-title m-t15"><a href="#">Provide qualtiy productivity..</a></h4>
-									<p class="m-b15">Lorem ipsum dolor Fusce varius euismod lacus eget feugiat rorem ipsum dolor consectetur Fusce varius [...]</p>
-									<a href="#" class="site-button-link black">Read More <i class="fa fa-long-arrow-right"></i></a> 
-								</div>
-							</div>
-						</div>
+						@endforeach
                     </div>
-                </div>
+				</div>
+				@endif
             </div>
         </div>
         <!-- Latest Blog END -->

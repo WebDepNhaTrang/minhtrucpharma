@@ -1,0 +1,9 @@
+.dez-post-text .excerpt, .blog-carousel .excerpt{
+    height: 72px;
+    overflow: hidden;
+}
+
+.dez-post-title .post-title, .blog-carousel .dez-title{
+    height: 48px;
+    overflow: hidden;
+}

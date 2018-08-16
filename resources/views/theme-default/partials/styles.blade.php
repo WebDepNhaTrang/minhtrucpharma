@@ -20,3 +20,4 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('plugins/revolution/revolution/css/navigation.css') }}">
 <!-- Google fonts -->
 <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900|Open+Sans:300,400,600,700,800|Roboto:100,300,400,500,700,900" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}">

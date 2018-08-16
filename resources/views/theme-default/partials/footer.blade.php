@@ -98,8 +98,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 text-left"> <span>© 2018 Minh Trúc Pharma</span> </div>
-                    <div class="col-md-4 text-center"> <span> Thiết kế và phát triển <i class="fa fa-heart text-primary heart"></i> <a href="http://facebook.com/webdepnhatrang" target="_blank" class="designBy" title="thiết kế web tại Nha Trang, thiết kế web Khánh Hòa, web đẹp nha trang">KaTiSoft - Web Đẹp Nha Trang </a> </span> </div>
-                    <div class="col-md-4 text-right "> <a href="about-2.html"> About</a> <a href="help.html"> Help Desk</a> <a href="privacy-policy.html"> Privacy Policy</a> </div>
+                    <div class="col-md-4 text-center"> <span> Thiết kế và phát triển <i class="fa fa-heart text-primary heart"></i><br><a href="http://facebook.com/webdepnhatrang" target="_blank" class="designBy" title="thiết kế web tại Nha Trang, thiết kế web Khánh Hòa, web đẹp nha trang">KaTiSoft - Web Đẹp Nha Trang </a> </span> </div>
+                    <div class="col-md-4 text-right "> <a href="{{ route('frontend.pages.home') }}"> Giới Thiệu</a> <a href="help.html"> Help Desk</a> <a href="privacy-policy.html"> Privacy Policy</a> </div>
                 </div>
             </div>
         </div>
