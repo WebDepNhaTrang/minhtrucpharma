@@ -27,7 +27,7 @@
 <!-- sortcode fuctions  -->
 
 <!-- switcher fuctions  -->
-<script   src="{{ asset('js/dz.ajax.js') }}"></script>
+<!-- <script   src="{{ asset('js/dz.ajax.js') }}"></script> -->
 <!-- contact-us js -->
 <!-- revolution JS FILES -->
 <script  src="{{ asset('plugins/revolution/revolution/js/jquery.themepunch.tools.min.js') }}"></script>

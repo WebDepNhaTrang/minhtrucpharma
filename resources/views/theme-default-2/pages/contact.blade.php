@@ -3,9 +3,9 @@
 @section('title', 'Liên Hệ')
 @section('description', '')
 
-@section('fb_url', url('/'))
+@section('fb_url', route('frontend.pages.contact'))
 @section('fb_type', 'website')
-@section('fb_title', '')
+@section('fb_title', 'Liên Hệ')
 @section('fb_des', '')
 @section('fb_img', '')
 

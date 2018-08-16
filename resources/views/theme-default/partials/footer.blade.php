@@ -81,13 +81,13 @@
                     </div>
                     <div class="col-md-3 col-sm-6 footer-col-4">
                         <div class="widget widget_getintuch">
-                            <h4 class="m-b15 text-uppercase">Contact us</h4>
+                            <h4 class="m-b15 text-uppercase">Liên Hệ</h4>
                             <div class="dez-separator bg-primary"></div>
                             <ul>
-                                <li><i class="fa fa-map-marker"></i><strong>address</strong> demo address #8901 Marmora Road Chi Minh City, Vietnam </li>
-                                <li><i class="fa fa-phone"></i><strong>phone</strong>0800-123456 (24/7 Support Line)</li>
-                                <li><i class="fa fa-fax"></i><strong>FAX</strong>(123) 123-4567</li>
-                                <li><i class="fa fa-envelope"></i><strong>email</strong>info@demo.com</li>
+                                <li><i class="fa fa-map-marker"></i><strong>địa chỉ</strong> {{ setting('contact.address') }} </li>
+                                <li><i class="fa fa-phone"></i><strong>điện thoại</strong>{{ setting('contact.phone') }}</li>
+                                <!-- <li><i class="fa fa-fax"></i><strong>FAX</strong>(123) 123-4567</li> -->
+                                <li><i class="fa fa-envelope"></i><strong>email</strong>{{ setting('contact.email') }}</li>
                             </ul>
                         </div>
                     </div>
@@ -98,7 +98,7 @@
         <div class="footer-bottom ">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12 text-center"> <span>© copyright 2016  by DexignZone. All Rights Reserved.</span> </div>
+                    <div class="col-md-12 text-center"> <span>© 2018</span> <a href="http://facebook.com/webdepnhatrang" target="_blank" class="designBy" title="thiết kế web tại Nha Trang, thiết kế web Khánh Hòa, web đẹp nha trang">Thiết kế và phát triển: KaTiSoft - Web Đẹp Nha Trang </a></div>
                 </div>
             </div>
         </div>
