@@ -137,7 +137,7 @@
 					<div class="col-md-12">
 					<!-- Map part start -->
 					<h2>Vị Trí Của Chúng Tôi</h2>
-					<iframe width="100%" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:{{ setting('contact.google_place_id') }}&key=AIzaSyAqzbw4yIUcASpNWpMPiPCVFIV9GLbWYdE" allowfullscreen></iframe>
+					<iframe width="100%" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:{{ setting('contact.google_place_id') }}&key={{ setting('contact.google_api_key')  }}" allowfullscreen></iframe>
 					<!-- Map part END -->
 					</div>
 				</div>

@@ -13,7 +13,7 @@
 	<!-- Insert content here -->
     <div class="page-content">
         <!-- inner page banner -->
-        <div class="dez-bnr-inr overlay-black-middle" style="background-image:url(images/banner/bnr1.jpg);">
+        <div class="dez-bnr-inr overlay-black-middle" style="background-image:url({{ Voyager::image(setting('about.about_page_banner')) }});">
             <div class="container">
                 <div class="dez-bnr-inr-entry">
                     <h1 class="text-white">Giới Thiệu</h1>
@@ -39,16 +39,11 @@
                     <div class="section-content">
                         <div class="row">
                             <div class="col-md-7">
-                                <h3 class="h3 text-uppercase">About<span class="text-primary"> Us</span></h3>
-                                <p class="m-b10"><strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown...</strong></p>
-                                <p class="m-b30">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
-                                <p class="m-b30">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
-                                <p class="m-b30">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
-                                <p class="m-b30">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
-                                <p class="m-b30">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
+                                <h3 class="h3 text-uppercase">Về<span class="text-primary"> Chúng Tôi</span></h3>
+                                {!! setting('about.st_about_content') !!}
                             </div>
                             <div class="col-md-5">
-                                <div class="dez-thum disnone-sm"><img src="images/worker.png" alt=""></div>
+                                <div class="dez-thum disnone-sm"><img src="{{ Voyager::image(setting('about.st_about_image')) }}" alt="Minh Trúc Pharma"></div>
                             </div>
                         </div>
                     </div>
@@ -198,43 +193,38 @@
             </div>
             <!-- Our Awesome Services END -->
             <!-- Testimonials -->
+            @php
+			$testimonials = getAllTestimonials('*', 'created_at', 'asc')
+            @endphp
+            @if( $testimonials->count() > 0 )
             <div class="section-full bg-img-fix content-inner overlay-black-dark testimonials" style="background-image:url(images/background/bg3.jpg);">
                 <div class="container">
                     <div class="section-head text-center text-white">
-                        <h3 class="h3"> Testimonials</h3>
+                        <h3 class="h3">{{ setting('about.st_testimonial_title') }}</h3>
                         <div class="dez-separator bg-primary"></div>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the industry's standard dummy text ever since the been when an unknown printer.</p>
+                        <p>{{ setting('about.st_testimonial_description') }}</p>
                     </div>
                     <div class="section-content">
                         <div class="testimonial-five">
+                            @foreach($testimonials as $v)
                             <div class="item">
                                 <div class="testimonial-6">
                                     <div class="testimonial-text bg-white quote-left quote-right">
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an printer took a galley of type and scrambled it to make [...]</p>
+                                    {!! $v->content !!}
                                     </div>
                                     <div class="testimonial-detail clearfix bg-primary text-white">
-                                        <h4 class="testimonial-name m-tb0">David Matin</h4>
-                                        <span class="testimonial-position">Student</span>
-                                        <div class="testimonial-pic radius"><img src="images/testimonials/pic1.jpg" alt="" width="100" height="100"></div>
+                                        <h4 class="testimonial-name m-tb0">{{ $v->name }}</h4>
+                                        <span class="testimonial-position">{{ $v->job }}</span>
+                                        <div class="testimonial-pic radius"><img src="{{ Voyager::image($v->avatar) }}" alt="testimonial" width="100" height="100"></div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
-                                <div class="testimonial-6">
-                                    <div class="testimonial-text bg-white quote-left quote-right">
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an printer took a galley of type and scrambled it to make [...]</p>
-                                    </div>
-                                    <div class="testimonial-detail clearfix bg-primary text-white">
-                                        <h4 class="testimonial-name m-tb0">David Matin</h4>
-                                        <span class="testimonial-position">Student</span>
-                                        <div class="testimonial-pic radius"><img src="images/testimonials/pic2.jpg" alt="" width="100" height="100"></div>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
             </div>
+            @endif
             <!-- Testimonials End -->
         </div>
         <!-- contact area END -->

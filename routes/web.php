@@ -39,3 +39,13 @@ Route::get('/gioi-thieu.html', function (){
 Route::get('/lien-he.html', function (){
     return view('theme-default.pages.contact');
 })->name('frontend.pages.contact');
+
+// Sản Phẩm
+Route::get('/san-pham.html', function (){
+    return view('theme-default.pages.product');
+})->name('frontend.pages.product');
+
+// Hoạt Động Nổi Bật
+Route::get('/hoat-dong-noi-bat.html', function (){
+    return view('theme-default.pages.news');
+})->name('frontend.pages.news');

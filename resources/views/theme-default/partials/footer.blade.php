@@ -1,17 +1,17 @@
 <!-- Footer -->
-<footer class="site-footer footer-white">
+    <footer class="site-footer footer-overlay bg-img-fix" style="background-image: url({{ Voyager::image(setting('site.footer_bg')) }}); background-position: center bottom; background-size: cover; display: block; height: 500px;">
         <div class="footer-top">
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 col-sm-6 footer-col-4">
                         <div class="widget widget_about">
-                            <div class="logo-footer"><img alt="" src="images/logo.png"></div>
-                            <p><strong>MediCo.</strong> ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore agna aliquam erat . wisi enim ad minim veniam, quis tation. sit amet, consec tetuer.ipsum dolor sit amet, consectetuer adipiscing.ipsum dolor sit amet, consectetuer adipiscing elitam nonummy nibh euis</p>
-                            <ul class="dez-social-icon border">
-                                <li><a class="fa fa-facebook" href="javascript:void(0);"></a></li>
-                                <li><a class="fa fa-twitter" href="javascript:void(0);"></a></li>
-                                <li><a class="fa fa-linkedin" href="javascript:void(0);"></a></li>
-                                <li><a class="fa fa-facebook" href="javascript:void(0);"></a></li>
+                            <div class="logo-footer"><img src="{{ Voyager::image(setting('site.footer_logo')) }}" alt=""></div>
+                            {!! setting('site.footer_info') !!}
+                            <ul class="dez-social-icon border dez-social-icon-lg">
+                                <li><a href="javascript:void(0);" class="fa fa-facebook fb-btn"></a></li>
+                                <li><a href="javascript:void(0);" class="fa fa-twitter tw-btn"></a></li>
+                                <li><a href="javascript:void(0);" class="fa fa-linkedin link-btn"></a></li>
+                                <li><a href="javascript:void(0);" class="fa fa-pinterest-p pin-btn"></a></li>
                             </ul>
                         </div>
                     </div>
@@ -81,13 +81,12 @@
                     </div>
                     <div class="col-md-3 col-sm-6 footer-col-4">
                         <div class="widget widget_getintuch">
-                            <h4 class="m-b15 text-uppercase">Liên Hệ</h4>
+                            <h4 class="m-b15 text-uppercase">Contact us</h4>
                             <div class="dez-separator bg-primary"></div>
                             <ul>
                                 <li><i class="fa fa-map-marker"></i><strong>địa chỉ</strong> {{ setting('contact.address') }} </li>
-                                <li><i class="fa fa-phone"></i><strong>điện thoại</strong>{{ setting('contact.phone') }}</li>
-                                <!-- <li><i class="fa fa-fax"></i><strong>FAX</strong>(123) 123-4567</li> -->
-                                <li><i class="fa fa-envelope"></i><strong>email</strong>{{ setting('contact.email') }}</li>
+                                <li><i class="fa fa-phone"></i><strong>điện thoại</strong> {{ setting('contact.phone') }} </li>
+                                <li><i class="fa fa-envelope"></i><strong>email</strong> {{ setting('contact.email') }} </li>
                             </ul>
                         </div>
                     </div>
@@ -95,14 +94,18 @@
             </div>
         </div>
         <!-- footer bottom part -->
-        <div class="footer-bottom ">
+        <div class="footer-bottom">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12 text-center"> <span>© 2018</span> <a href="http://facebook.com/webdepnhatrang" target="_blank" class="designBy" title="thiết kế web tại Nha Trang, thiết kế web Khánh Hòa, web đẹp nha trang">Thiết kế và phát triển: KaTiSoft - Web Đẹp Nha Trang </a></div>
+                    <div class="col-md-4 text-left"> <span>© 2018 Minh Trúc Pharma</span> </div>
+                    <div class="col-md-4 text-center"> <span> Thiết kế và phát triển <i class="fa fa-heart text-primary heart"></i> <a href="http://facebook.com/webdepnhatrang" target="_blank" class="designBy" title="thiết kế web tại Nha Trang, thiết kế web Khánh Hòa, web đẹp nha trang">KaTiSoft - Web Đẹp Nha Trang </a> </span> </div>
+                    <div class="col-md-4 text-right "> <a href="about-2.html"> About</a> <a href="help.html"> Help Desk</a> <a href="privacy-policy.html"> Privacy Policy</a> </div>
                 </div>
             </div>
         </div>
     </footer>
-    <!-- Footer END-->
-    <!-- scroll top button -->
-    <button class="scroltop fa fa-chevron-up" ></button>
+
+
+<!-- Footer END-->
+<!-- scroll top button -->
+<button class="scroltop fa fa-chevron-up" ></button>

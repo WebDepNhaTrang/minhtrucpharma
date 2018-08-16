@@ -22,19 +22,11 @@
                 <div class="section-content">
                     <div class="row">
                         <div class="col-md-7">
-                            <h3 class="h3 text-uppercase">About<span class="text-primary"> Us</span></h3>
-                            <p class="m-b10"><strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown...</strong></p>
-							<p class="m-b30">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
-							<p class="m-b10"><strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown...</strong></p>
-							<p class="m-b30">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
-							<p class="m-b10"><strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown...</strong></p>
-							<p class="m-b30">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
-							<p class="m-b10"><strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown...</strong></p>
-                            <p class="m-b30">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
-                            
+                            <h3 class="h3 text-uppercase">Về<span class="text-primary"> Chúng Tôi</span></h3>
+                            {!! setting('about.st_about_content') !!}
                         </div>
                         <div class="col-md-5">
-                            <div class="dez-thum disnone-sm"><img src="images/worker.png" alt=""></div>
+                            <div class="dez-thum disnone-sm"><img src="{{ Voyager::image(setting('about.st_about_image')) }}" alt="Minh Trúc Pharma"></div>
                         </div>
                     </div>
                 </div>
@@ -42,7 +34,7 @@
         </div>
         <!-- About Company END -->
 		<!-- Why Choose Us  -->
-        <div class="section-full bg-img-fix content-inner overlay-primary-dark text-white" style="background-image:url(images/background/bg9.jpg);">
+        <div class="section-full bg-img-fix content-inner overlay-primary-dark text-white" style="background-image:url({{ asset('images/background/bg9.jpg') }});">
             <div class="container">
                 <div class="row">
 					<div class="col-md-3 col-sm-6">
@@ -85,86 +77,124 @@
             </div>
         </div>
         <!-- Why Choose Us END -->
-		<!-- Services -->
+		<!-- Product -->
         <div class="section-full bg-white content-inner">
             <div class="container">
                 <div class="section-head text-center ">
-                    <h3 class="h3 text-uppercase">Our Best <span class="text-primary">Services</span></h3>
+                    <h3 class="h3 text-uppercase"><span class="text-primary">Sản Phẩm</span> Tiêu Biểu</h3>
 					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the industry's standard dummy text ever since the been when an unknown printer.</p>
                 </div>
-                <div class="section-content ">
-                    <div class="row">
-                        <div class="col-md-4 col-sm-6 m-b30">
-							<div class="dez-box">
-								<div class="dez-media"> <a href="#"><img src="images/our-services/service/pic1.jpg" alt=""></a> </div>
-								<div class="dez-info p-a30 border-1">
-									<h4 class="dez-title m-t0"><a href="#">Dental Fillings</a></h4>
-									<div class="dez-separator bg-primary"></div>
-									<p class="m-b15">Lorem ipsum dolor Fusce varius euismod lacus eget feugiat rorem ipsum dolor consectetur Fusce varius [...] </p>
-									<a href="#" class="site-button-link black">Read More <i class="fa fa-long-arrow-right"></i></a> 
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 col-sm-6 m-b30">
+							<div class="dez-box p-a20 border-1 bg-gray">
+								<div class="dez-thum-bx dez-img-overlay1 dez-img-effect zoom"> <img src="images/product/img1.jpg" alt="">
+									<div class="overlay-bx">
+										<div class="overlay-icon"> <a href="javascript:void(0)"> <i class="fa fa-cart-plus icon-bx-xs"></i> </a> <a href="javascript:void(0)"> <i class="fa fa-search icon-bx-xs"></i> </a> <a href="javascript:void(0)"> <i class="fa fa-heart icon-bx-xs"></i> </a> </div>
+									</div>
 								</div>
+								<div class="dez-info p-t20 text-center">
+									<h4 class="dez-title m-t0 text-uppercase"><a href="#">first heading</a></h4>
+									<h2 class="m-b0">$20.00 </h2>
+									<a href="javascript:void(0)" class="site-button  m-t15">Add To Cart</a> </div>
 							</div>
 						</div>
-						<div class="col-md-4 col-sm-6 m-b30">
-							<div class="dez-box">
-								<div class="dez-media"> <a href="#"><img src="images/our-services/service/pic2.jpg" alt=""></a> </div>
-								<div class="dez-info p-a30 border-1">
-									<h4 class="dez-title m-t0"><a href="#">Orthodontics</a></h4>
-									<div class="dez-separator bg-primary"></div>
-									<p class="m-b15">Lorem ipsum dolor Fusce varius euismod lacus eget feugiat rorem ipsum dolor consectetur Fusce varius [...] </p>
-									<a href="#" class="site-button-link black">Read More <i class="fa fa-long-arrow-right"></i></a> 
+						<div class="col-md-3 col-sm-6 m-b30">
+							<div class="dez-box p-a20 border-1 bg-gray">
+								<div class="dez-thum-bx dez-img-overlay1 dez-img-effect zoom"> <img src="images/product/img2.jpg" alt="">
+									<div class="overlay-bx">
+										<div class="overlay-icon"> <a href="javascript:void(0)"> <i class="fa fa-cart-plus icon-bx-xs"></i> </a> <a href="javascript:void(0)"> <i class="fa fa-search icon-bx-xs"></i> </a> <a href="javascript:void(0)"> <i class="fa fa-heart icon-bx-xs"></i> </a> </div>
+									</div>
 								</div>
+								<div class="dez-info p-t20 text-center">
+									<h4 class="dez-title m-t0 text-uppercase"><a href="#">first heading</a></h4>
+									<h2 class="m-b0">$20.00 </h2>
+									<a href="javascript:void(0)" class="site-button  m-t15">Add To Cart</a> </div>
 							</div>
 						</div>
-						<div class="col-md-4 col-sm-6 m-b30">
-							<div class="dez-box">
-								<div class="dez-media"> <a href="#"><img src="images/our-services/service/pic3.jpg" alt=""></a> </div>
-								<div class="dez-info p-a30 border-1">
-									<h4 class="dez-title m-t0"><a href="#">Tooth Extraction</a></h4>
-									<div class="dez-separator bg-primary"></div>
-									<p class="m-b15">Lorem ipsum dolor Fusce varius euismod lacus eget feugiat rorem ipsum dolor consectetur Fusce varius [...] </p>
-									<a href="#" class="site-button-link black">Read More <i class="fa fa-long-arrow-right"></i></a> 
+						<div class="col-md-3 col-sm-6 m-b30">
+							<div class="dez-box p-a20 border-1 bg-gray">
+								<div class="dez-thum-bx dez-img-overlay1 dez-img-effect zoom"> <img src="images/product/img3.jpg" alt="">
+									<div class="overlay-bx">
+										<div class="overlay-icon"> <a href="javascript:void(0)"> <i class="fa fa-cart-plus icon-bx-xs"></i> </a> <a href="javascript:void(0)"> <i class="fa fa-search icon-bx-xs"></i> </a> <a href="javascript:void(0)"> <i class="fa fa-heart icon-bx-xs"></i> </a> </div>
+									</div>
 								</div>
+								<div class="dez-info p-t20 text-center">
+									<h4 class="dez-title m-t0 text-uppercase"><a href="#">first heading</a></h4>
+									<h2 class="m-b0">$20.00 </h2>
+									<a href="javascript:void(0)" class="site-button  m-t15">Add To Cart</a> </div>
 							</div>
 						</div>
-						<div class="col-md-4 col-sm-6 m-b30">
-							<div class="dez-box">
-								<div class="dez-media"> <a href="#"><img src="images/our-services/service/pic4.jpg" alt=""></a> </div>
-								<div class="dez-info p-a30 border-1">
-									<h4 class="dez-title m-t0"><a href="#">Root Canal Treatment</a></h4>
-									<div class="dez-separator bg-primary"></div>
-									<p class="m-b15">Lorem ipsum dolor Fusce varius euismod lacus eget feugiat rorem ipsum dolor consectetur Fusce varius [...] </p>
-									<a href="#" class="site-button-link black">Read More <i class="fa fa-long-arrow-right"></i></a> 
+						<div class="col-md-3 col-sm-6 m-b30">
+							<div class="dez-box p-a20 border-1 bg-gray">
+								<div class="dez-thum-bx dez-img-overlay1 dez-img-effect zoom"> <img src="images/product/img4.jpg" alt="">
+									<div class="overlay-bx">
+										<div class="overlay-icon"> <a href="javascript:void(0)"> <i class="fa fa-cart-plus icon-bx-xs"></i> </a> <a href="javascript:void(0)"> <i class="fa fa-search icon-bx-xs"></i> </a> <a href="javascript:void(0)"> <i class="fa fa-heart icon-bx-xs"></i> </a> </div>
+									</div>
 								</div>
+								<div class="dez-info p-t20 text-center">
+									<h4 class="dez-title m-t0 text-uppercase"><a href="#">first heading</a></h4>
+									<h2 class="m-b0">$20.00 </h2>
+									<a href="javascript:void(0)" class="site-button  m-t15">Add To Cart</a> </div>
 							</div>
 						</div>
-						<div class="col-md-4 col-sm-6 m-b30">
-							<div class="dez-box">
-								<div class="dez-media"> <a href="#"><img src="images/our-services/service/pic5.jpg" alt=""></a> </div>
-								<div class="dez-info p-a30 border-1">
-									<h4 class="dez-title m-t0"><a href="#">Teeth Whitening</a></h4>
-									<div class="dez-separator bg-primary"></div>
-									<p class="m-b15">Lorem ipsum dolor Fusce varius euismod lacus eget feugiat rorem ipsum dolor consectetur Fusce varius [...] </p>
-									<a href="#" class="site-button-link black">Read More <i class="fa fa-long-arrow-right"></i></a> 
+						<div class="col-md-3 col-sm-6 m-b30">
+							<div class="dez-box p-a20 border-1 bg-gray">
+								<div class="dez-thum-bx dez-img-overlay1 dez-img-effect zoom"> <img src="images/product/img5.jpg" alt="">
+									<div class="overlay-bx">
+										<div class="overlay-icon"> <a href="javascript:void(0)"> <i class="fa fa-cart-plus icon-bx-xs"></i> </a> <a href="javascript:void(0)"> <i class="fa fa-search icon-bx-xs"></i> </a> <a href="javascript:void(0)"> <i class="fa fa-heart icon-bx-xs"></i> </a> </div>
+									</div>
 								</div>
+								<div class="dez-info p-t20 text-center">
+									<h4 class="dez-title m-t0 text-uppercase"><a href="#">first heading</a></h4>
+									<h2 class="m-b0">$20.00 </h2>
+									<a href="javascript:void(0)" class="site-button  m-t15">Add To Cart</a> </div>
 							</div>
 						</div>
-						<div class="col-md-4 col-sm-6 m-b30">
-							<div class="dez-box">
-								<div class="dez-media"> <a href="#"><img src="images/our-services/service/pic6.jpg" alt=""></a> </div>
-								<div class="dez-info p-a30 border-1">
-									<h4 class="dez-title m-t0"><a href="#">Routine Dental Exam</a></h4>
-									<div class="dez-separator bg-primary"></div>
-									<p class="m-b15">Lorem ipsum dolor Fusce varius euismod lacus eget feugiat rorem ipsum dolor consectetur Fusce varius [...] </p>
-									<a href="#" class="site-button-link black">Read More <i class="fa fa-long-arrow-right"></i></a> 
+						<div class="col-md-3 col-sm-6 m-b30">
+							<div class="dez-box p-a20 border-1 bg-gray">
+								<div class="dez-thum-bx dez-img-overlay1 dez-img-effect zoom"> <img src="images/product/img6.jpg" alt="">
+									<div class="overlay-bx">
+										<div class="overlay-icon"> <a href="javascript:void(0)"> <i class="fa fa-cart-plus icon-bx-xs"></i> </a> <a href="javascript:void(0)"> <i class="fa fa-search icon-bx-xs"></i> </a> <a href="javascript:void(0)"> <i class="fa fa-heart icon-bx-xs"></i> </a> </div>
+									</div>
 								</div>
+								<div class="dez-info p-t20 text-center">
+									<h4 class="dez-title m-t0 text-uppercase"><a href="#">first heading</a></h4>
+									<h2 class="m-b0">$20.00 </h2>
+									<a href="javascript:void(0)" class="site-button  m-t15">Add To Cart</a> </div>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6 m-b30">
+							<div class="dez-box p-a20 border-1 bg-gray">
+								<div class="dez-thum-bx dez-img-overlay1 dez-img-effect zoom"> <img src="images/product/img1.jpg" alt="">
+									<div class="overlay-bx">
+										<div class="overlay-icon"> <a href="javascript:void(0)"> <i class="fa fa-cart-plus icon-bx-xs"></i> </a> <a href="javascript:void(0)"> <i class="fa fa-search icon-bx-xs"></i> </a> <a href="javascript:void(0)"> <i class="fa fa-heart icon-bx-xs"></i> </a> </div>
+									</div>
+								</div>
+								<div class="dez-info p-t20 text-center">
+									<h4 class="dez-title m-t0 text-uppercase"><a href="#">first heading</a></h4>
+									<h2 class="m-b0">$20.00 </h2>
+									<a href="javascript:void(0)" class="site-button  m-t15">Add To Cart</a> </div>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6 m-b30">
+							<div class="dez-box p-a20 border-1 bg-gray">
+								<div class="dez-thum-bx dez-img-overlay1 dez-img-effect zoom"> <img src="images/product/img2.jpg" alt="">
+									<div class="overlay-bx">
+										<div class="overlay-icon"> <a href="javascript:void(0)"> <i class="fa fa-cart-plus icon-bx-xs"></i> </a> <a href="javascript:void(0)"> <i class="fa fa-search icon-bx-xs"></i> </a> <a href="javascript:void(0)"> <i class="fa fa-heart icon-bx-xs"></i> </a> </div>
+									</div>
+								</div>
+								<div class="dez-info p-t20 text-center">
+									<h4 class="dez-title m-t0 text-uppercase"><a href="#">first heading</a></h4>
+									<h2 class="m-b0">$20.00 </h2>
+									<a href="javascript:void(0)" class="site-button  m-t15">Add To Cart</a> </div>
 							</div>
 						</div>
 					</div>
-                </div>
+				</div>
             </div>
         </div>
-        <!-- Services END -->
+        <!-- Product END -->
         <!-- Our Project -->
         <div class="section-full bg-img-fix overlay-primary-dark content-inner-1 dez-support" style="background-image:url(images/background/bg9.jpg);">
             <div class="container">
@@ -177,45 +207,8 @@
 			   </div>
             </div>
         </div>
-        <!-- Our Project END -->
-        <!-- Testimoniay -->
-		<div class="section-full owl-dots-style bg-img-fix md-testimonial"  style="background-image:url(images/background/bg3.jpg); background-size:cover;">
-			<div class="container-fluid p-a0">
-				<div class="section-content col-md-6 overlay-primary-dark content-inner-1 bg-img-fix " style="background-image:url(images/background/bg9.jpg);">
-					<div class="testimonial-six relative z-index2">
-						<div class="item">
-							<div class="testimonial-1 testimonial-bg">
-								<div class="testimonial-pic quote-left radius shadow"><img src="images/testimonials/pic1.jpg" width="100" height="100" alt=""></div>
-								<div class="testimonial-text">
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets conta</p>
-								</div>
-								<div class="testimonial-detail"> <strong class="testimonial-name">David Matin</strong> <span class="testimonial-position">Student</span> </div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="testimonial-1 testimonial-bg">
-								<div class="testimonial-pic quote-left radius shadow"><img src="images/testimonials/pic2.jpg" width="100" height="100" alt=""></div>
-								<div class="testimonial-text">
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets conta</p>
-								</div>
-								<div class="testimonial-detail"> <strong class="testimonial-name">David Matin</strong> <span class="testimonial-position">Student</span> </div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="testimonial-1 testimonial-bg">
-								<div class="testimonial-pic quote-left radius shadow"><img src="images/testimonials/pic3.jpg" width="100" height="100" alt=""></div>
-								<div class="testimonial-text">
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets conta</p>
-								</div>
-								<div class="testimonial-detail"> <strong class="testimonial-name">David Matin</strong> <span class="testimonial-position">Student</span> </div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- Testimoniay END -->
-        <!-- Latest Blog -->
+		<!-- Our Project END -->
+		<!-- Latest Blog -->
 		<div class="section-full bg-white content-inner">
             <div class="container">
                 <div class="section-head text-center ">
@@ -285,49 +278,33 @@
             </div>
         </div>
         <!-- Latest Blog END -->
-		<div class="section-full bg-primary overlay-primary-dark bg-img-fix" style="background-image:url(images/background/bg9.jpg);">
-			<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-3 col-sm-6 ov-white1 text-white">
-					<div class="icon-bx-wraper p-a40 center">
-						<div class="icon-md m-b20"> <span class="icon-cell"><i class="fa fa-clock-o"></i></span> </div>
-						<div class="icon-content">
-							<h5 class="dez-tilte text-uppercase">CALL CENTER 24/7</h5>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod [...]</p>
+		<!-- Testimoniay -->
+		@php
+			$testimonials = getAllTestimonials('*', 'created_at', 'asc')
+		@endphp
+		@if( $testimonials->count() > 0 )
+		<div class="section-full owl-dots-style bg-img-fix md-testimonial"  style="background-image:url({{ asset('images/background/bg3.jpg') }}); background-size:cover;">
+			<div class="container-fluid p-a0">
+				<div class="section-content col-md-6 overlay-primary-dark content-inner-1 bg-img-fix " style="background-image:url(images/background/bg9.jpg);">
+					<div class="testimonial-six relative z-index2">
+						@foreach($testimonials as $v)
+						<div class="item">
+							<div class="testimonial-1 testimonial-bg">
+								<div class="testimonial-pic quote-left radius shadow"><img src="{{ Voyager::image($v->avatar) }}" width="100" height="100" alt="testimonial"></div>
+								<div class="testimonial-text">
+									{!! $v->content !!}
+								</div>
+								<div class="testimonial-detail"> <strong class="testimonial-name">{{ $v->name }}</strong> <span class="testimonial-position">{{ $v->job }}</span> </div>
+							</div>
 						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 ov-white2 text-white">
-					<div class="icon-bx-wraper p-a40 center">
-						<div class="icon-md m-b20"> <span class="icon-cell"><i class="fa fa-user"></i></span> </div>
-						<div class="icon-content">
-							<h5 class="dez-tilte text-uppercase">Professional staff</h5>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod [...]</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 ov-white3 text-white">
-					<div class="icon-bx-wraper p-a40 center">
-						<div class="icon-md m-b20"> <span class="icon-cell"><i class="fa fa-pencil"></i></span> </div>
-						<div class="icon-content">
-							<h5 class="dez-tilte text-uppercase">Modern Equipment</h5>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod [...]</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 ov-white4 text-white">
-					<div class="icon-bx-wraper p-a40 center">
-						<div class="icon-md m-b20"> <span class="icon-cell"><i class="fa fa-file-text"></i></span> </div>
-						<div class="icon-content">
-							<h5 class="dez-tilte text-uppercase">ONLINE APPOINTMENT</h5>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod [...]</p>
-						</div>
+						@endforeach
+						
 					</div>
 				</div>
 			</div>
 		</div>
-		</div>
-        <!-- Content END-->
+		@endif
+		<!-- Testimoniay END -->
 	</div>
 @endsection
 
