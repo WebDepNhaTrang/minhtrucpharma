@@ -12,7 +12,7 @@
 @section('content')
 <div class="page-content">
         <!-- inner page banner -->
-        <div class="dez-bnr-inr overlay-black-middle" style="background-image:url(images/banner/bnr1.jpg);">
+        <div class="dez-bnr-inr overlay-black-middle" style="background-image:url({{ Voyager::image(setting('recruitment.banner')) }});">
             <div class="container">
                 <div class="dez-bnr-inr-entry">
                     <h1 class="text-white">Tuyển Dụng</h1>

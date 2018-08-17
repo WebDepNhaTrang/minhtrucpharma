@@ -24,7 +24,7 @@
                 <div class="col-md-4 col-sm-4 m-b30"> <a href="#"><img src="{{ Voyager::image($product->image) }}" alt="{{ $product->name }}"></a> </div>
                 <div class="col-md-8 col-sm-8">
                     <div class="dez-post-title ">
-                        <h3 class="post-title"><a href="#">{{ $product->name }}</a></h3>
+                        <h3 class="post-title" style="font-size: 40px; height: auto; overflow: unset;"><a href="#">{{ $product->name }}</a></h3>
                     </div>
                     <h2 class="m-tb10">{{ number_format($product->price, 0, '', '.') }} VNĐ</h2>
                     <div class="dez-post-text">

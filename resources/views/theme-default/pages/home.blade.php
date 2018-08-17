@@ -34,45 +34,10 @@
         </div>
         <!-- About Company END -->
 		<!-- Why Choose Us  -->
-        <div class="section-full bg-img-fix content-inner overlay-primary-dark text-white" style="background-image:url({{ asset('images/background/bg9.jpg') }});">
+        <div class="section-full bg-img-fix content-inner overlay-primary-dark text-white" style="background-image:url({{ asset('images/background/bg9.jpg') }}); padding: 45px 0;">
             <div class="container">
                 <div class="row">
-					<div class="col-md-3 col-sm-6">
-						<div class="counter-style-1 m-b30">
-							<div class="">
-								<i class="icon flaticon-bar-chart text-white"></i>
-								<span class="counter">7652</span>
-							</div>
-							<span class="counter-text">Khách Hàng</span>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6">
-						<div class="counter-style-1 m-b30">
-							<div class="">
-								<i class="icon flaticon-social text-white"></i>
-								<span class="counter">4562</span>
-							</div>
-							<span class="counter-text">Đối Tác</span>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6">
-						<div class="counter-style-1 m-b30">
-							<div class="">
-								<i class="icon flaticon-file text-white"></i>
-								<span class="counter">3569</span>
-							</div>
-							<span class="counter-text">Sản Phẩm</span>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6">
-						<div class="counter-style-1 m-b30">
-							<div class="">
-								<i class="icon flaticon-pencil text-white"></i>
-								<span class="counter">2089</span>
-							</div>
-							<span class="counter-text">Giải Thưởng</span>
-						</div>
-					</div>
+					
 				</div>
             </div>
         </div>
