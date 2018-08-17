@@ -118,7 +118,7 @@
         </div>
         <!-- Product END -->
         <!-- Our Project -->
-        <div class="section-full bg-img-fix overlay-primary-dark content-inner-1 dez-support" style="background-image:url(images/background/bg9.jpg);">
+        <div class="section-full bg-img-fix overlay-primary-dark content-inner-1 dez-support" style="background-image:url({{ asset('images/background/bg9.jpg')}});">
             <div class="container">
                 <div class="row">
 					<div class="col-md-12 text-center text-white ">

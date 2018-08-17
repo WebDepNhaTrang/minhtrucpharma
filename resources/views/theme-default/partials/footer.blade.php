@@ -1,5 +1,5 @@
 <!-- Footer -->
-    <footer class="site-footer footer-overlay bg-img-fix" style="background-image: url({{ Voyager::image(setting('site.footer_bg')) }}); background-position: center bottom; background-size: cover; display: block; height: 500px;">
+    <footer class="site-footer footer-overlay bg-img-fix" style="background-image: url({{ Voyager::image(setting('site.footer_bg')) }}); background-position: center bottom; background-size: cover; display: block;">
         <div class="footer-top">
             <div class="container">
                 <div class="row">
@@ -40,7 +40,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 text-left"> <span>© 2018 Minh Trúc Pharma</span> </div>
-                    <div class="col-md-4 text-center"> <span> Thiết kế và phát triển <i class="fa fa-heart text-primary heart"></i><br><a href="http://facebook.com/webdepnhatrang" target="_blank" class="designBy" title="thiết kế web tại Nha Trang, thiết kế web Khánh Hòa, web đẹp nha trang">KaTiSoft - Web Đẹp Nha Trang </a> </span> </div>
+                    <div class="col-md-4 text-center"> <span> Thiết kế và phát triển <i class="fa fa-heart text-primary heart"></i><br><a href="https://webdepnhatrang.com" target="_blank" class="designBy" title="thiết kế web tại Nha Trang, thiết kế web Khánh Hòa, web đẹp nha trang">KaTiSoft - Web Đẹp Nha Trang </a> </span> </div>
                     <div class="col-md-4 text-right "> <a href="{{ route('frontend.pages.home') }}"> Giới Thiệu</a> | <a href="{{ route('frontend.pages.news') }}"> Hoạt Động</a> | <a href="#"> Tuyển Dụng</a></div>
                 </div>
             </div>

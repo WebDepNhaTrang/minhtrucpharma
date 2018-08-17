@@ -17,10 +17,6 @@
 								<span>{{ setting('contact.email') }}</span> 
 							</li>
 							<li>
-								<h6 class="text-primary"><i class="fa fa-clock-o"></i> Giờ Mở Cửa</h6>
-								<span>{{ setting('contact.business_hours') }}</span> 
-							</li>
-							<li>
 								<h6 class="text-primary"><i class="fa fa-phone"></i>Tư Vẫn Miễn Phí</h6>
 								<span>{{ setting('contact.phone') }}</span> 
 							</li>

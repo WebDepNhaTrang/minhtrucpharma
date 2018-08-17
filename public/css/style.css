@@ -4609,7 +4609,7 @@ ol.comment-list li.comment .comment-respond .comment-form p {
 ---------------------------------------------------------------*/
 
 .widget {
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 }
 .widget-title {
     margin: 0 0 25px;
@@ -7772,7 +7772,7 @@ footer .widget_getintuch i {
     background: #25272E;
     background-size: cover;
     background-position: center;
-    padding: 50px 0 20px;
+    padding: 15px 0 0px;
 }
 .footer-line {
     position: relative;
@@ -7790,9 +7790,9 @@ footer .widget_getintuch i {
 }
 .footer-bottom {
     background-color:#25272E;
-    padding: 25px 0;
+    padding: 10px 0;
     color: #fff;
-    font-size: 15px;
+    font-size: 12px;
 	border-top:1px solid #2d2f36;
 }
 .footer-bottom ul {
