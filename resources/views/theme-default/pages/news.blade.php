@@ -42,21 +42,21 @@
                         @foreach($posts as $v)
                         <div class="post card-container col-lg-4 col-md-6 col-sm-6 col-xs-12">
                             <div class="blog-post blog-grid date-style-2">
-                                <div class="dez-post-media dez-img-effect zoom-slow"> <a href="#"><img src="{{ Voyager::image($v->image) }}" alt="{{ $v->title }}"></a> </div>
+                                <div class="dez-post-media dez-img-effect zoom-slow"> <a href="{{ route('frontend.pages.news-detail', ['slug' => $v->slug, 'id' => $v->id]) }}"><img src="{{ Voyager::image($v->image) }}" alt="{{ $v->title }}"></a> </div>
                                 <div class="dez-post-info">
                                     <div class="dez-post-title ">
-                                        <h3 class="post-title"><a href="#">{{ $v->title }}</a></h3>
+                                        <h3 class="post-title"><a href="{{ route('frontend.pages.news-detail', ['slug' => $v->slug, 'id' => $v->id]) }}">{{ $v->title }}</a></h3>
                                     </div>
                                     <div class="dez-post-meta ">
                                         <ul>
                                             <li class="post-date"> <i class="fa fa-calendar"></i><strong>{{ $v->created_at->format('d-M') }}</strong> <span> {{ $v->created_at->format('Y') }}</span> </li>
-                                            <li class="post-author"><i class="fa fa-user"></i>Đăng bởi <a href="#">Minh Trúc Pharma</a> </li>
+                                            <li class="post-author"><i class="fa fa-user"></i>Đăng bởi <a href="{{ route('frontend.pages.home') }}">Minh Trúc Pharma</a> </li>
                                         </ul>
                                     </div>
                                     <div class="dez-post-text">
                                         <p class="excerpt">{{ shorten_text($v->excerpt, 200, '...', true) }}</p>
                                     </div>
-                                    <div class="dez-post-readmore"> <a href="#" title="READ MORE" rel="bookmark" class="site-button-link">Xem Thêm<i class="fa fa-angle-double-right"></i></a> </div>
+                                    <div class="dez-post-readmore"> <a href="{{ route('frontend.pages.news-detail', ['slug' => $v->slug, 'id' => $v->id]) }}" title="Xem Thêm" rel="bookmark" class="site-button-link">Xem Thêm<i class="fa fa-angle-double-right"></i></a> </div>
                                 </div>
                             </div>
                         </div>

@@ -49,3 +49,16 @@ Route::get('/san-pham.html', function (){
 Route::get('/hoat-dong-noi-bat.html', function (){
     return view('theme-default.pages.news');
 })->name('frontend.pages.news');
+// Chi Tiết Hoạt Động Nổi Bật
+Route::get('/{slug}_{id}.html', 'FrontendController@newsDetail')
+    ->name('frontend.pages.news-detail');
+
+// Chi Tiết Sản Phẩm
+Route::get('/san-pham/{slug}_{id}.html', 'FrontendController@productDetail')
+->name('frontend.pages.product-detail');
+
+// Tuyển Dụng
+Route::get('/tuyen-dung.html', [
+    'uses'  => 'FrontendController@recruitment',
+    'as'    => 'frontend.pages.recruitment'
+]);

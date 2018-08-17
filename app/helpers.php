@@ -86,3 +86,19 @@ if(! function_exists('shorten_text'))
         return $text;
     }
 }
+
+/*
+ * @select: string
+ * @order_col: string
+ * @order_by: asc/desc
+ */
+if(! function_exists('getAllProducts'))
+{
+    function getAllProducts($select='*', $order_col, $order_by="asc")
+    {
+        $item = App\Product::select($select)
+                ->orderBy($order_col, $order_by)
+                ->get();
+        return $item;
+    }
+}

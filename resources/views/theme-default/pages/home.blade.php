@@ -43,7 +43,7 @@
 								<i class="icon flaticon-bar-chart text-white"></i>
 								<span class="counter">7652</span>
 							</div>
-							<span class="counter-text">Completed Projects</span>
+							<span class="counter-text">Khách Hàng</span>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6">
@@ -52,7 +52,7 @@
 								<i class="icon flaticon-social text-white"></i>
 								<span class="counter">4562</span>
 							</div>
-							<span class="counter-text">Happy Clients</span>
+							<span class="counter-text">Đối Tác</span>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6">
@@ -61,7 +61,7 @@
 								<i class="icon flaticon-file text-white"></i>
 								<span class="counter">3569</span>
 							</div>
-							<span class="counter-text">Questions Answered</span>
+							<span class="counter-text">Sản Phẩm</span>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6">
@@ -70,7 +70,7 @@
 								<i class="icon flaticon-pencil text-white"></i>
 								<span class="counter">2089</span>
 							</div>
-							<span class="counter-text">Ordered Coffee's</span>
+							<span class="counter-text">Giải Thưởng</span>
 						</div>
 					</div>
 				</div>
@@ -78,120 +78,42 @@
         </div>
         <!-- Why Choose Us END -->
 		<!-- Product -->
+		@php
+			$products = getAllProducts('*', 'created_at', 'asc');
+		@endphp
         <div class="section-full bg-white content-inner">
             <div class="container">
                 <div class="section-head text-center ">
                     <h3 class="h3 text-uppercase"><span class="text-primary">Sản Phẩm</span> Tiêu Biểu</h3>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the industry's standard dummy text ever since the been when an unknown printer.</p>
-                </div>
+					<p>{{ setting('product.description') }}</p>
+				</div>
+				@if( $products->count() > 0 )
 				<div class="container">
 					<div class="row">
-						<div class="col-md-3 col-sm-6 m-b30">
-							<div class="dez-box p-a20 border-1 bg-gray">
-								<div class="dez-thum-bx dez-img-overlay1 dez-img-effect zoom"> <img src="images/product/img1.jpg" alt="">
-									<div class="overlay-bx">
-										<div class="overlay-icon"> <a href="javascript:void(0)"> <i class="fa fa-cart-plus icon-bx-xs"></i> </a> <a href="javascript:void(0)"> <i class="fa fa-search icon-bx-xs"></i> </a> <a href="javascript:void(0)"> <i class="fa fa-heart icon-bx-xs"></i> </a> </div>
+						<div class="col-md-3"></div>
+						@php $count = 0; @endphp
+						@foreach( $products as $v )
+							@if( $count < 2 )
+								<div class="col-md-3 col-sm-6 m-b30">
+									<div class="dez-box p-a20 border-1 bg-gray">
+										<div class="dez-thum-bx dez-img-overlay1 dez-img-effect zoom"> <img src="{{ Voyager::image($v->image) }}" alt="{{ $v->name }}">
+											<div class="overlay-bx">
+												<div class="overlay-icon"> <a href="{{ route('frontend.pages.product-detail', ['slug' => $v->slug, 'id' => $v->id]) }}"> <i class="fa fa-search icon-bx-xs"></i> </div>
+											</div>
+										</div>
+										<div class="dez-info p-t20 text-center">
+											<h4 class="dez-title m-t0 text-uppercase"><a href="{{ route('frontend.pages.product-detail', ['slug' => $v->slug, 'id' => $v->id]) }}">{{ $v->name }}</a></h4>
+											<h2 class="m-b0">{{ number_format($v->price, 0, '', '.') }} VNĐ</h2>
+											<a href="{{ route('frontend.pages.product-detail', ['slug' => $v->slug, 'id' => $v->id]) }}" class="site-button m-t15">Xem Chi Tiết</a> </div>
 									</div>
 								</div>
-								<div class="dez-info p-t20 text-center">
-									<h4 class="dez-title m-t0 text-uppercase"><a href="#">first heading</a></h4>
-									<h2 class="m-b0">$20.00 </h2>
-									<a href="javascript:void(0)" class="site-button  m-t15">Add To Cart</a> </div>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-6 m-b30">
-							<div class="dez-box p-a20 border-1 bg-gray">
-								<div class="dez-thum-bx dez-img-overlay1 dez-img-effect zoom"> <img src="images/product/img2.jpg" alt="">
-									<div class="overlay-bx">
-										<div class="overlay-icon"> <a href="javascript:void(0)"> <i class="fa fa-cart-plus icon-bx-xs"></i> </a> <a href="javascript:void(0)"> <i class="fa fa-search icon-bx-xs"></i> </a> <a href="javascript:void(0)"> <i class="fa fa-heart icon-bx-xs"></i> </a> </div>
-									</div>
-								</div>
-								<div class="dez-info p-t20 text-center">
-									<h4 class="dez-title m-t0 text-uppercase"><a href="#">first heading</a></h4>
-									<h2 class="m-b0">$20.00 </h2>
-									<a href="javascript:void(0)" class="site-button  m-t15">Add To Cart</a> </div>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-6 m-b30">
-							<div class="dez-box p-a20 border-1 bg-gray">
-								<div class="dez-thum-bx dez-img-overlay1 dez-img-effect zoom"> <img src="images/product/img3.jpg" alt="">
-									<div class="overlay-bx">
-										<div class="overlay-icon"> <a href="javascript:void(0)"> <i class="fa fa-cart-plus icon-bx-xs"></i> </a> <a href="javascript:void(0)"> <i class="fa fa-search icon-bx-xs"></i> </a> <a href="javascript:void(0)"> <i class="fa fa-heart icon-bx-xs"></i> </a> </div>
-									</div>
-								</div>
-								<div class="dez-info p-t20 text-center">
-									<h4 class="dez-title m-t0 text-uppercase"><a href="#">first heading</a></h4>
-									<h2 class="m-b0">$20.00 </h2>
-									<a href="javascript:void(0)" class="site-button  m-t15">Add To Cart</a> </div>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-6 m-b30">
-							<div class="dez-box p-a20 border-1 bg-gray">
-								<div class="dez-thum-bx dez-img-overlay1 dez-img-effect zoom"> <img src="images/product/img4.jpg" alt="">
-									<div class="overlay-bx">
-										<div class="overlay-icon"> <a href="javascript:void(0)"> <i class="fa fa-cart-plus icon-bx-xs"></i> </a> <a href="javascript:void(0)"> <i class="fa fa-search icon-bx-xs"></i> </a> <a href="javascript:void(0)"> <i class="fa fa-heart icon-bx-xs"></i> </a> </div>
-									</div>
-								</div>
-								<div class="dez-info p-t20 text-center">
-									<h4 class="dez-title m-t0 text-uppercase"><a href="#">first heading</a></h4>
-									<h2 class="m-b0">$20.00 </h2>
-									<a href="javascript:void(0)" class="site-button  m-t15">Add To Cart</a> </div>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-6 m-b30">
-							<div class="dez-box p-a20 border-1 bg-gray">
-								<div class="dez-thum-bx dez-img-overlay1 dez-img-effect zoom"> <img src="images/product/img5.jpg" alt="">
-									<div class="overlay-bx">
-										<div class="overlay-icon"> <a href="javascript:void(0)"> <i class="fa fa-cart-plus icon-bx-xs"></i> </a> <a href="javascript:void(0)"> <i class="fa fa-search icon-bx-xs"></i> </a> <a href="javascript:void(0)"> <i class="fa fa-heart icon-bx-xs"></i> </a> </div>
-									</div>
-								</div>
-								<div class="dez-info p-t20 text-center">
-									<h4 class="dez-title m-t0 text-uppercase"><a href="#">first heading</a></h4>
-									<h2 class="m-b0">$20.00 </h2>
-									<a href="javascript:void(0)" class="site-button  m-t15">Add To Cart</a> </div>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-6 m-b30">
-							<div class="dez-box p-a20 border-1 bg-gray">
-								<div class="dez-thum-bx dez-img-overlay1 dez-img-effect zoom"> <img src="images/product/img6.jpg" alt="">
-									<div class="overlay-bx">
-										<div class="overlay-icon"> <a href="javascript:void(0)"> <i class="fa fa-cart-plus icon-bx-xs"></i> </a> <a href="javascript:void(0)"> <i class="fa fa-search icon-bx-xs"></i> </a> <a href="javascript:void(0)"> <i class="fa fa-heart icon-bx-xs"></i> </a> </div>
-									</div>
-								</div>
-								<div class="dez-info p-t20 text-center">
-									<h4 class="dez-title m-t0 text-uppercase"><a href="#">first heading</a></h4>
-									<h2 class="m-b0">$20.00 </h2>
-									<a href="javascript:void(0)" class="site-button  m-t15">Add To Cart</a> </div>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-6 m-b30">
-							<div class="dez-box p-a20 border-1 bg-gray">
-								<div class="dez-thum-bx dez-img-overlay1 dez-img-effect zoom"> <img src="images/product/img1.jpg" alt="">
-									<div class="overlay-bx">
-										<div class="overlay-icon"> <a href="javascript:void(0)"> <i class="fa fa-cart-plus icon-bx-xs"></i> </a> <a href="javascript:void(0)"> <i class="fa fa-search icon-bx-xs"></i> </a> <a href="javascript:void(0)"> <i class="fa fa-heart icon-bx-xs"></i> </a> </div>
-									</div>
-								</div>
-								<div class="dez-info p-t20 text-center">
-									<h4 class="dez-title m-t0 text-uppercase"><a href="#">first heading</a></h4>
-									<h2 class="m-b0">$20.00 </h2>
-									<a href="javascript:void(0)" class="site-button  m-t15">Add To Cart</a> </div>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-6 m-b30">
-							<div class="dez-box p-a20 border-1 bg-gray">
-								<div class="dez-thum-bx dez-img-overlay1 dez-img-effect zoom"> <img src="images/product/img2.jpg" alt="">
-									<div class="overlay-bx">
-										<div class="overlay-icon"> <a href="javascript:void(0)"> <i class="fa fa-cart-plus icon-bx-xs"></i> </a> <a href="javascript:void(0)"> <i class="fa fa-search icon-bx-xs"></i> </a> <a href="javascript:void(0)"> <i class="fa fa-heart icon-bx-xs"></i> </a> </div>
-									</div>
-								</div>
-								<div class="dez-info p-t20 text-center">
-									<h4 class="dez-title m-t0 text-uppercase"><a href="#">first heading</a></h4>
-									<h2 class="m-b0">$20.00 </h2>
-									<a href="javascript:void(0)" class="site-button  m-t15">Add To Cart</a> </div>
-							</div>
-						</div>
+							@endif
+							@php $count++ @endphp
+						@endforeach
+						<div class="col-md-3"></div>
 					</div>
 				</div>
+				@endif
             </div>
         </div>
         <!-- Product END -->
@@ -225,7 +147,7 @@
                         <div class="item">
 							<div class="dez-box">
 								<div class="dez-media"> 
-									<a href="#"><img src="{{ Voyager::image($v->image) }}" alt="{{ $v->title }}"></a> 
+									<a href="{{ route('frontend.pages.news-detail', ['slug' => $v->slug, 'id' => $v->id]) }}"><img src="{{ Voyager::image($v->image) }}" alt="{{ $v->title }}"></a> 
 								</div>
 								<div class="dez-info p-a20 border-1">
 									<div class="dez-post-meta ">
@@ -234,9 +156,9 @@
                                             <li class="post-author"><i class="fa fa-user"></i>Đăng bởi <a href="#">Minh Trúc Pharma</a> </li>
                                         </ul>
                                     </div>
-									<h4 class="dez-title m-t15"><a href="#">{{ $v->title }}</a></h4>
+									<h4 class="dez-title m-t15"><a href="{{ route('frontend.pages.news-detail', ['slug' => $v->slug, 'id' => $v->id]) }}">{{ $v->title }}</a></h4>
 									<p class="m-b15 excerpt">{{ shorten_text($v->excerpt, 200, '...', true) }}</p>
-									<a href="#" class="site-button-link black">Xem thêm <i class="fa fa-long-arrow-right"></i></a> 
+									<a href="{{ route('frontend.pages.news-detail', ['slug' => $v->slug, 'id' => $v->id]) }}" class="site-button-link black">Xem thêm <i class="fa fa-long-arrow-right"></i></a> 
 								</div>
 							</div>
 						</div>
