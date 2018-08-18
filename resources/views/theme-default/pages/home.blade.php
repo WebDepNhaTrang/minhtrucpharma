@@ -68,7 +68,7 @@
 										</div>
 										<div class="dez-info p-t20 text-center">
 											<h4 class="dez-title m-t0 text-uppercase"><a href="{{ route('frontend.pages.product-detail', ['slug' => $v->slug, 'id' => $v->id]) }}">{{ $v->name }}</a></h4>
-											<h2 class="m-b0">{{ number_format($v->price, 0, '', '.') }} VNĐ</h2>
+											
 											<a href="{{ route('frontend.pages.product-detail', ['slug' => $v->slug, 'id' => $v->id]) }}" class="site-button m-t15">Xem Chi Tiết</a> </div>
 									</div>
 								</div>

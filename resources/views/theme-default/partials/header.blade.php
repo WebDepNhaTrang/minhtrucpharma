@@ -31,7 +31,7 @@
                 <div class="navigation-bar bg-primary">
                     <div class="container clearfix">
                         <!-- website logo -->
-                        <div class="logo-header mostion"><a href="index.html"><img src="images/logo-white1.png" width="193" height="89" alt=""></a></div>
+                        <div class="logo-header mostion"><a href="index.html"><img src="{{ Voyager::image(setting('site.logo')) }}" width="193" height="89" alt=""></a></div>
                         <!-- nav toggle button -->
                         <button data-target=".header-nav" data-toggle="collapse" type="button" class="navbar-toggle collapsed"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
                         <!-- extra nav -->
