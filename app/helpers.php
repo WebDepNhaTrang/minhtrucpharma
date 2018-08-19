@@ -4,13 +4,23 @@
  * @order_col: string
  * @order_by: asc/desc
  */
-if(! function_exists('getAllBanners'))
+// if(! function_exists('getAllBanners'))
+// {
+//     function getAllBanners($select='*', $order_col, $order_by="asc")
+//     {
+//         $item = App\Banner::select($select)
+//                 ->orderBy($order_col, $order_by)
+//                 ->get();
+//         return $item;
+//     }
+// }
+if(! function_exists('getHomepageGallery'))
 {
-    function getAllBanners($select='*', $order_col, $order_by="asc")
+    function getHomepageGallery()
     {
-        $item = App\Banner::select($select)
-                ->orderBy($order_col, $order_by)
-                ->get();
+        $item = App\Gallery::select('*')
+                ->where('slug','homepage-gallery')
+                ->first();
         return $item;
     }
 }

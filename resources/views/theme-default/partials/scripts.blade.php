@@ -24,7 +24,8 @@
 <script   src="{{ asset('js/custom.js') }}"></script>
 <!-- custom fuctions  -->
 <script   src="{{ asset('js/dz.carousel.js') }}"></script>
-<!-- sortcode fuctions  -->
+<!-- slick js -->
+<script src="{{ asset('js/slick.js') }}"></script>
 
 <!-- switcher fuctions  -->
 <!-- <script   src="{{ asset('js/dz.ajax.js') }}"></script> -->

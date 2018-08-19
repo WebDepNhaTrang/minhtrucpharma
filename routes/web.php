@@ -41,9 +41,9 @@ Route::get('/lien-he.html', function (){
 })->name('frontend.pages.contact');
 
 // Sản Phẩm
-Route::get('/san-pham.html', function (){
-    return view('theme-default.pages.product');
-})->name('frontend.pages.product');
+// Route::get('/san-pham.html', function (){
+//     return view('theme-default.pages.product');
+// })->name('frontend.pages.product');
 
 // Hoạt Động Nổi Bật
 Route::get('/hoat-dong-noi-bat.html', function (){

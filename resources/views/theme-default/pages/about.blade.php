@@ -13,7 +13,7 @@
 	<!-- Insert content here -->
     <div class="page-content">
         <!-- inner page banner -->
-        <div class="dez-bnr-inr overlay-black-middle" style="background-image:url({{ Voyager::image(setting('about.about_page_banner')) }});">
+        <div class="dez-bnr-inr overlay-black-light" style="background-image:url({{ Voyager::image(setting('about.about_page_banner')) }});">
             <div class="container">
                 <div class="dez-bnr-inr-entry">
                     <h1 class="text-white">Giới Thiệu</h1>
@@ -50,29 +50,7 @@
                 </div>
             </div>
             <!-- About Company END -->
-            
-            <!-- Company Stats  -->
-            <div class="section-full bg-img-fix content-inner-1 overlay-black-dark our-projects-galery" style="background-image:url(images/background/bg3.jpg); padding: 45px 0;">
-                <div class="container">
-                    <div class="row">
-                    </div>
-                </div>
-            </div>
-            <!-- Company Stats END -->
-            <!-- Our Awesome Services -->
-            <div class="section-full bg-white content-inner">
-                <div class="container">
-                    <div class="section-content">
-                        <div class="row">
-                            <div class="col-md-12">
-                                {!! setting('about.st_certification_content') !!}
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-            <!-- Our Awesome Services END -->
+        
             <!-- Testimonials -->
             @php
 			$testimonials = getAllTestimonials('*', 'created_at', 'asc')

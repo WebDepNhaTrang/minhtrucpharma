@@ -17,7 +17,7 @@
         @include('theme-default.partials.slider')
         <!-- Slider END -->
         <!-- About Company -->
-        <div class="section-full content-inner bg-white">
+        <div class="section-full content-inner bg-white" style="padding-top: 40px;">
             <div class="container">
                 <div class="section-content">
                     <div class="row">
@@ -166,5 +166,30 @@
 
 @section('script')
     <!-- Insert script here -->
+	<script>
+		$(document).ready(function(){
+			// Slider
+			$('.customer-logos').slick({
+				slidesToShow: 3,
+				slidesToScroll: 1,	
+				autoplay: true,
+				autoplaySpeed: 1500,
+				arrows: false,
+				dots: false,
+				pauseOnHover: false,
+				responsive: [{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 3
+					}
+				}, {
+					breakpoint: 520,
+					settings: {
+						slidesToShow: 2
+					}
+				}]
+			});
+		});
+	</script>
 @endsection
     
