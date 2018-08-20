@@ -12,7 +12,7 @@
     // die();
 ?>
     @if($gallery)
-        <section class="" id="partner" style="background-color: {{ setting('home.banner_background_color') }};">
+        <section class="" id="partner" style="background-image: url({{ Voyager::image(setting('home.slider_bg_image')) }}); background-repeat: no-repeat; background-size: cover; background-posision: center top; background-attachment: fixed;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">

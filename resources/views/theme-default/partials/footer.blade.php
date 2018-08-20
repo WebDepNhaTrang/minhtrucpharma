@@ -1,5 +1,5 @@
 <!-- Footer -->
-    <footer class="site-footer footer-overlay bg-img-fix" style="background-image: url({{ Voyager::image(setting('site.footer_bg')) }}); background-position: center bottom; background-size: cover; display: block;">
+<footer class="site-footer footer-overlay bg-img-fix" style="background-image: url({{ Voyager::image(setting('site.footer_bg')) }}); background-position: center top; background-size: cover; display: block;">
         <div class="footer-top">
             <div class="container">
                 <div class="row">
