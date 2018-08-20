@@ -1,11 +1,11 @@
 @extends('theme-default.layouts.master')
 
-@section('title', 'Trang Chủ')
+@section('title', 'Minh Trúc')
 @section('description', setting('site.description'))
 
 @section('fb_url', route('frontend.pages.home'))
 @section('fb_type', 'website')
-@section('fb_title', 'Trang Chủ - Minh Trúc Pharma')
+@section('fb_title', 'Minh Trúc - Minh Trúc Pharma')
 @section('fb_des', setting('site.description'))
 @section('fb_img', '')
 
