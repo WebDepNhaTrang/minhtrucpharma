@@ -13,7 +13,7 @@
 	<!-- Insert content here -->
     <div class="page-content">
         <!-- inner page banner -->
-        <div class="dez-bnr-inr overlay-black-middle" style="background-image:url({{ Voyager::image(setting('contact.banner')) }});">
+        <div class="dez-bnr-inr overlay-black-light" style="background-image:url({{ Voyager::image(setting('contact.banner')) }});">
             <div class="container">
                 <div class="dez-bnr-inr-entry">
                     <h1 class="text-white">Liên Hệ</h1>

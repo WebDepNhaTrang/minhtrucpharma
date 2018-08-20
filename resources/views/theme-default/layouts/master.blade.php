@@ -10,7 +10,7 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>@yield('title') | Minh Trúc Pharma</title>
         <meta name="description" content="@yield('description')">
-        <meta name="keywords" content="@yield('keywords')">
+        <meta name="keywords" content="KIDS TI - NEST, COLLANEST - GINSENG, @yield('keywords')">
         <meta name="author" content="Web Đẹp Nha Trang" />
         <meta http-equiv="content-language" content="{{ app()->getLocale() }}" />
         <meta name="robots" content="index, follow">
