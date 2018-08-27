@@ -18,7 +18,7 @@
 							</li>
 							<li>
 								<h6 class="text-primary"><i class="fa fa-phone"></i>Tư Vẫn Miễn Phí</h6>
-								<span>{{ setting('contact.phone') }}</span> 
+								<span>{{ setting('contact.phone2') }}</span> 
 							</li>
 						</ul>
 					</div>
