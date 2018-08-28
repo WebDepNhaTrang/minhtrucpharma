@@ -28,6 +28,7 @@
                             <ul>
                                 <li><i class="fa fa-map-marker"></i><strong>địa chỉ</strong> {{ setting('contact.address') }} </li>
                                 <li><i class="fa fa-phone"></i><strong>điện thoại</strong> {{ setting('contact.phone') }} </li>
+                                <li><img src="{{ asset('images/zalo.png') }}" style="width:30px; height: 30px; position: absolute;left: 0;top: 5px;" alt=""><strong>zalo</strong> {{ setting('contact.phone2') }} </li>
                                 <li><i class="fa fa-envelope"></i><strong>email</strong> {{ setting('contact.email') }} </li>
                             </ul>
                         </div>
