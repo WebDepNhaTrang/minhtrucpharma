@@ -16,7 +16,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- FB Open Graph Tags -->
-        <meta property="fb:app_id"        content="2227774044178793" />
+        <meta property="fb:app_id"        content="" />
         <meta property="og:url"           content="@yield('fb_url')" />
         <meta property="og:type"          content="@yield('fb_type')" />
         <meta property="og:title"         content="@yield('fb_title')" />
